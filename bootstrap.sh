@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
 
 apt-get update
-apt-get install -y apache2
-apt-get install -y npm
+apt-get install -y g++ curl
 
-if ! [ -L /var/www ]; then
-  rm -rf /var/www
-  ln -fs /vagrant /var/www
-fi
+sudo curl -sL https://deb.nodesource.com/setup_0.12 | sudo sh
+sudo apt-get install -y nodejs
